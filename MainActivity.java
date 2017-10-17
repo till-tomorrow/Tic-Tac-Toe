@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv1.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv1.getText().toString())){
+                    Log.d("TAG", "null string found!!");
                     if (symbol) {
                         symbol = false;
                         tv1.setText("O");
@@ -39,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
                         tv1.setText("X");
                     }
                 }
-//            }
+            }
         });
         tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv2.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv2.getText().toString())){
                     if (symbol) {
                         symbol = false;
                         tv2.setText("O");
@@ -53,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
                         tv2.setText("X");
                     }
                 }
-//            }
+            }
         });
         tv3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv3.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv3.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv3.setText("O");
@@ -67,12 +68,13 @@ public class MainActivity extends AppCompatActivity {
                         tv3.setText("X");
                     }
                 }
-//            }
+                }
+
         });
         tv4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv4.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv4.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv4.setText("O");
@@ -81,12 +83,12 @@ public class MainActivity extends AppCompatActivity {
                         tv4.setText("X");
                     }
                 }
-//            }
+            }
         });
         tv5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv5.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv5.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv5.setText("O");
@@ -95,12 +97,12 @@ public class MainActivity extends AppCompatActivity {
                         tv5.setText("X");
                     }
                 }
-//            }
+            }
         });
         tv6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv6.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv4.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv6.setText("O");
@@ -109,12 +111,12 @@ public class MainActivity extends AppCompatActivity {
                         tv6.setText("X");
                     }
                 }
-//            }
+            }
         });
         tv7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv7.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv7.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv7.setText("O");
@@ -123,12 +125,12 @@ public class MainActivity extends AppCompatActivity {
                         tv7.setText("X");
                     }
                 }
-//            }
+            }
         });
         tv8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv8.getText().toString().equals(null)){
+                if(TextUtils.isEmpty(tv8.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv8.setText("O");
@@ -137,21 +139,21 @@ public class MainActivity extends AppCompatActivity {
                         tv8.setText("X");
                     }
                 }
-//            }
+            }
         });
         tv9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(tv9.getText().toString().equals(null)){
-                    if (symbol) {
-                        symbol = false;
-                        tv9.setText("O");
-                    } else {
-                        symbol = true;
-                        tv9.setText("X");
-                    }
-                }
-//            }
+              if(TextUtils.isEmpty(tv9.getText().toString())) {
+                  if (symbol) {
+                      symbol = false;
+                      tv9.setText("O");
+                  } else {
+                      symbol = true;
+                      tv9.setText("X");
+                  }
+              }
+            }
         });
     }
 }
