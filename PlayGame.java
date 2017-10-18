@@ -1,4 +1,4 @@
-package com.example.suniljain.tictactoe;
+package com.example.palakjain.tictactoe;
 
 
 import android.content.Context;
