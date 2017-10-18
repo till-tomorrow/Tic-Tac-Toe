@@ -1,3 +1,3 @@
 # Tic-Tac-Toe
 
- Tic-Tac-Toe/image1.jpg 
+ ![Pre Result-Declaration](image1.jpg)
