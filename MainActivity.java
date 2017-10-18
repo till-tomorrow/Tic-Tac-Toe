@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv1.getText().toString())){
-                    Log.d("TAG", "null string found!!");
+                if (TextUtils.isEmpty(tv1.getText().toString())) {
+                    //Log.d("TAG", "null string found!!");
                     if (symbol) {
                         symbol = false;
                         tv1.setText("O");
@@ -40,12 +40,13 @@ public class MainActivity extends AppCompatActivity {
                         tv1.setText("X");
                     }
                 }
+                checkPlayer1Win();
             }
         });
         tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv2.getText().toString())){
+                if (TextUtils.isEmpty(tv2.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv2.setText("O");
@@ -54,12 +55,13 @@ public class MainActivity extends AppCompatActivity {
                         tv2.setText("X");
                     }
                 }
+                checkPlayer2Win();
             }
         });
         tv3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv3.getText().toString())) {
+                if (TextUtils.isEmpty(tv3.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv3.setText("O");
@@ -68,13 +70,13 @@ public class MainActivity extends AppCompatActivity {
                         tv3.setText("X");
                     }
                 }
-                }
-
+                checkPlayer3Win();
+            }
         });
         tv4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv4.getText().toString())) {
+                if (TextUtils.isEmpty(tv4.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv4.setText("O");
@@ -83,12 +85,13 @@ public class MainActivity extends AppCompatActivity {
                         tv4.setText("X");
                     }
                 }
+                checkPlayer4Win();
             }
         });
         tv5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv5.getText().toString())) {
+                if (TextUtils.isEmpty(tv5.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv5.setText("O");
@@ -97,12 +100,13 @@ public class MainActivity extends AppCompatActivity {
                         tv5.setText("X");
                     }
                 }
+                checkPlayer5Win();
             }
         });
         tv6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv4.getText().toString())) {
+                if (TextUtils.isEmpty(tv6.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv6.setText("O");
@@ -111,12 +115,13 @@ public class MainActivity extends AppCompatActivity {
                         tv6.setText("X");
                     }
                 }
+                checkPlayer6Win();
             }
         });
         tv7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv7.getText().toString())) {
+                if (TextUtils.isEmpty(tv7.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv7.setText("O");
@@ -125,12 +130,13 @@ public class MainActivity extends AppCompatActivity {
                         tv7.setText("X");
                     }
                 }
+                checkPlayer7Win();
             }
         });
         tv8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(tv8.getText().toString())) {
+                if (TextUtils.isEmpty(tv8.getText().toString())) {
                     if (symbol) {
                         symbol = false;
                         tv8.setText("O");
@@ -139,21 +145,228 @@ public class MainActivity extends AppCompatActivity {
                         tv8.setText("X");
                     }
                 }
+                checkPlayer8Win();
             }
         });
         tv9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              if(TextUtils.isEmpty(tv9.getText().toString())) {
-                  if (symbol) {
-                      symbol = false;
-                      tv9.setText("O");
-                  } else {
-                      symbol = true;
-                      tv9.setText("X");
-                  }
-              }
+                if (TextUtils.isEmpty(tv9.getText().toString())) {
+                    if (symbol) {
+                        symbol = false;
+                        tv9.setText("O");
+                    } else {
+                        symbol = true;
+                        tv9.setText("X");
+                    }
+                }
+                checkPlayer9Win();
             }
         });
     }
+
+    public void checkPlayer1Win() {
+        if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
+            if (tv2.getText().toString().equals(tv3.getText().toString()) && tv2.getText().toString().equals(tv1.getText().toString())) {
+                if (tv1.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
+            if (tv4.getText().toString().equals(tv7.getText().toString()) && tv4.getText().toString().equals(tv1.getText().toString())) {
+                if (tv1.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
+            if (tv5.getText().toString().equals(tv9.getText().toString()) && tv5.getText().toString().equals(tv1.getText().toString())) {
+                if (tv1.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer2Win() {
+        if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
+            if (tv2.getText().toString().equals(tv3.getText().toString()) && tv2.getText().toString().equals(tv1.getText().toString())) {
+                if (tv2.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
+            if (tv5.getText().toString().equals(tv8.getText().toString()) && tv5.getText().toString().equals(tv2.getText().toString())) {
+                if (tv2.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer3Win() {
+        if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
+            if (tv2.getText().toString().equals(tv3.getText().toString()) && tv2.getText().toString().equals(tv1.getText().toString())) {
+                if (tv3.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv6.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
+            if (tv6.getText().toString().equals(tv9.getText().toString()) && tv6.getText().toString().equals(tv3.getText().toString())) {
+                if (tv3.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
+            if (tv5.getText().toString().equals(tv7.getText().toString()) && tv5.getText().toString().equals(tv3.getText().toString())) {
+                if (tv3.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer4Win() {
+        if (!TextUtils.isEmpty(tv1.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
+            if (tv1.getText().toString().equals(tv7.getText().toString()) && tv1.getText().toString().equals(tv4.getText().toString())) {
+                if (tv4.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
+            if (tv5.getText().toString().equals(tv6.getText().toString()) && tv5.getText().toString().equals(tv4.getText().toString())) {
+                if (tv4.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer5Win() {
+        if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
+            if (tv5.getText().toString().equals(tv8.getText().toString()) && tv2.getText().toString().equals(tv5.getText().toString())) {
+                if (tv1.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
+            if (tv4.getText().toString().equals(tv6.getText().toString()) && tv4.getText().toString().equals(tv5.getText().toString())) {
+                if (tv5.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv1.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
+            if (tv1.getText().toString().equals(tv9.getText().toString()) && tv1.getText().toString().equals(tv5.getText().toString())) {
+                if (tv5.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv3.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
+            if (tv3.getText().toString().equals(tv7.getText().toString()) && tv3.getText().toString().equals(tv5.getText().toString())) {
+                if (tv5.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer6Win() {
+        if (!TextUtils.isEmpty(tv3.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
+            if (tv3.getText().toString().equals(tv9.getText().toString()) && tv3.getText().toString().equals(tv6.getText().toString())) {
+                if (tv6.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv5.getText().toString())) {
+            if (tv4.getText().toString().equals(tv5.getText().toString()) && tv4.getText().toString().equals(tv6.getText().toString())) {
+                if (tv6.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer7Win() {
+        if (!TextUtils.isEmpty(tv1.getText().toString()) && !TextUtils.isEmpty(tv4.getText().toString())) {
+            if (tv1.getText().toString().equals(tv4.getText().toString()) && tv1.getText().toString().equals(tv7.getText().toString())) {
+                if (tv7.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv8.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
+            if (tv8.getText().toString().equals(tv9.getText().toString()) && tv8.getText().toString().equals(tv7.getText().toString())) {
+                if (tv7.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
+            if (tv5.getText().toString().equals(tv3.getText().toString()) && tv5.getText().toString().equals(tv7.getText().toString())) {
+                if (tv7.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer8Win() {
+        if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv5.getText().toString())) {
+            if (tv2.getText().toString().equals(tv5.getText().toString()) && tv2.getText().toString().equals(tv8.getText().toString())) {
+                if (tv8.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        } else if (!TextUtils.isEmpty(tv7.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
+            if (tv7.getText().toString().equals(tv9.getText().toString()) && tv7.getText().toString().equals(tv8.getText().toString())) {
+                if (tv8.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            }
+        }
+    }
+
+    public void checkPlayer9Win() {
+        if (!TextUtils.isEmpty(tv3.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
+            if (tv3.getText().toString().equals(tv6.getText().toString()) && tv3.getText().toString().equals(tv9.getText().toString())) {
+                if (tv9.getText().toString().equals("O"))
+                    Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                else
+                    Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+            } else if (!TextUtils.isEmpty(tv7.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
+                if (tv7.getText().toString().equals(tv8.getText().toString()) && tv7.getText().toString().equals(tv9.getText().toString())) {
+                    if (tv9.getText().toString().equals("O"))
+                        Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                    else
+                        Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                }
+            } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv1.getText().toString())) {
+                if (tv5.getText().toString().equals(tv1.getText().toString()) && tv5.getText().toString().equals(tv9.getText().toString())) {
+                    if (tv9.getText().toString().equals("O"))
+                        Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
+                    else
+                        Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                }
+            }
+        }
+    }
 }
+
