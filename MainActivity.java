@@ -165,27 +165,59 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void displayAlertDialog() {
+        Snackbar.make(findViewById(R.id.activity_main), "GAME OVER", Snackbar.LENGTH_INDEFINITE).show();
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+        alertBuilder.setMessage("Do you want to close this app?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog alertDialog = alertBuilder.create();
+        alertDialog.setTitle("GAME OVER!!");
+        alertBuilder.show();
+    }
+
     public void checkPlayer1Win() {
         if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
             if (tv2.getText().toString().equals(tv3.getText().toString()) && tv2.getText().toString().equals(tv1.getText().toString())) {
-                if (tv1.getText().toString().equals("O"))
+                if (tv1.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         } else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
             if (tv4.getText().toString().equals(tv7.getText().toString()) && tv4.getText().toString().equals(tv1.getText().toString())) {
-                if (tv1.getText().toString().equals("O"))
+                if (tv1.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv5.getText().toString().equals(tv9.getText().toString()) && tv5.getText().toString().equals(tv1.getText().toString())) {
-                if (tv1.getText().toString().equals("O"))
+                if (tv1.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         }
     }
@@ -193,17 +225,25 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer2Win() {
         if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
             if (tv2.getText().toString().equals(tv3.getText().toString()) && tv2.getText().toString().equals(tv1.getText().toString())) {
-                if (tv2.getText().toString().equals("O"))
+                if (tv2.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
             if (tv5.getText().toString().equals(tv8.getText().toString()) && tv5.getText().toString().equals(tv2.getText().toString())) {
-                if (tv2.getText().toString().equals("O"))
+                if (tv2.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         }
     }
@@ -211,24 +251,39 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer3Win() {
         if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
             if (tv2.getText().toString().equals(tv3.getText().toString()) && tv2.getText().toString().equals(tv1.getText().toString())) {
-                if (tv3.getText().toString().equals("O"))
+                if (tv3.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         } else if (!TextUtils.isEmpty(tv6.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv6.getText().toString().equals(tv9.getText().toString()) && tv6.getText().toString().equals(tv3.getText().toString())) {
-                if (tv3.getText().toString().equals("O"))
+                if (tv3.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
             if (tv5.getText().toString().equals(tv7.getText().toString()) && tv5.getText().toString().equals(tv3.getText().toString())) {
-                if (tv3.getText().toString().equals("O"))
+                if (tv3.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         }
     }
@@ -236,17 +291,28 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer4Win() {
         if (!TextUtils.isEmpty(tv1.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
             if (tv1.getText().toString().equals(tv7.getText().toString()) && tv1.getText().toString().equals(tv4.getText().toString())) {
-                if (tv4.getText().toString().equals("O"))
+                if (tv4.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else {
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
             if (tv5.getText().toString().equals(tv6.getText().toString()) && tv5.getText().toString().equals(tv4.getText().toString())) {
-                if (tv4.getText().toString().equals("O"))
+                if (tv4.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         }
     }
@@ -254,31 +320,55 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer5Win() {
         if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
             if (tv5.getText().toString().equals(tv8.getText().toString()) && tv2.getText().toString().equals(tv5.getText().toString())) {
-                if (tv1.getText().toString().equals("O"))
+                if (tv1.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
             if (tv4.getText().toString().equals(tv6.getText().toString()) && tv4.getText().toString().equals(tv5.getText().toString())) {
-                if (tv5.getText().toString().equals("O"))
+                if (tv5.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv1.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv1.getText().toString().equals(tv9.getText().toString()) && tv1.getText().toString().equals(tv5.getText().toString())) {
-                if (tv5.getText().toString().equals("O"))
+                if (tv5.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv3.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
             if (tv3.getText().toString().equals(tv7.getText().toString()) && tv3.getText().toString().equals(tv5.getText().toString())) {
-                if (tv5.getText().toString().equals("O"))
+                if (tv5.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         }
     }
@@ -286,17 +376,29 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer6Win() {
         if (!TextUtils.isEmpty(tv3.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv3.getText().toString().equals(tv9.getText().toString()) && tv3.getText().toString().equals(tv6.getText().toString())) {
-                if (tv6.getText().toString().equals("O"))
+                if (tv6.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv5.getText().toString())) {
             if (tv4.getText().toString().equals(tv5.getText().toString()) && tv4.getText().toString().equals(tv6.getText().toString())) {
-                if (tv6.getText().toString().equals("O"))
+                if (tv6.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         }
     }
@@ -304,24 +406,42 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer7Win() {
         if (!TextUtils.isEmpty(tv1.getText().toString()) && !TextUtils.isEmpty(tv4.getText().toString())) {
             if (tv1.getText().toString().equals(tv4.getText().toString()) && tv1.getText().toString().equals(tv7.getText().toString())) {
-                if (tv7.getText().toString().equals("O"))
+                if (tv7.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv8.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv8.getText().toString().equals(tv9.getText().toString()) && tv8.getText().toString().equals(tv7.getText().toString())) {
-                if (tv7.getText().toString().equals("O"))
+                if (tv7.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
             if (tv5.getText().toString().equals(tv3.getText().toString()) && tv5.getText().toString().equals(tv7.getText().toString())) {
-                if (tv7.getText().toString().equals("O"))
+                if (tv7.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         }
     }
@@ -329,17 +449,28 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer8Win() {
         if (!TextUtils.isEmpty(tv2.getText().toString()) && !TextUtils.isEmpty(tv5.getText().toString())) {
             if (tv2.getText().toString().equals(tv5.getText().toString()) && tv2.getText().toString().equals(tv8.getText().toString())) {
-                if (tv8.getText().toString().equals("O"))
+                if (tv8.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             }
         } else if (!TextUtils.isEmpty(tv7.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv7.getText().toString().equals(tv9.getText().toString()) && tv7.getText().toString().equals(tv8.getText().toString())) {
-                if (tv8.getText().toString().equals("O"))
+                if (tv8.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else {
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
             }
         }
     }
@@ -347,26 +478,43 @@ public class MainActivity extends AppCompatActivity {
     public void checkPlayer9Win() {
         if (!TextUtils.isEmpty(tv3.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
             if (tv3.getText().toString().equals(tv6.getText().toString()) && tv3.getText().toString().equals(tv9.getText().toString())) {
-                if (tv9.getText().toString().equals("O"))
+                if (tv9.getText().toString().equals("O")){
                     Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                else
+                    displayAlertDialog();
+                }
+
+                else{
                     Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                    displayAlertDialog();
+                }
+
             } else if (!TextUtils.isEmpty(tv7.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
                 if (tv7.getText().toString().equals(tv8.getText().toString()) && tv7.getText().toString().equals(tv9.getText().toString())) {
-                    if (tv9.getText().toString().equals("O"))
+                    if (tv9.getText().toString().equals("O")){
                         Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                    else
+                        displayAlertDialog();
+                    }
+
+                    else{
                         Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                        displayAlertDialog();
+                    }
+
                 }
             } else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv1.getText().toString())) {
                 if (tv5.getText().toString().equals(tv1.getText().toString()) && tv5.getText().toString().equals(tv9.getText().toString())) {
-                    if (tv9.getText().toString().equals("O"))
+                    if (tv9.getText().toString().equals("O")){
                         Toast.makeText(MainActivity.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
-                    else
+                        displayAlertDialog();
+                    }
+
+                    else{
                         Toast.makeText(MainActivity.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
+                        displayAlertDialog();
+                    }
+
                 }
             }
         }
     }
 }
-
