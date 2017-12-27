@@ -288,6 +288,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }else  if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
             if (tv4.getText().toString().equals(tv7.getText().toString()) && tv4.getText().toString().equals(tv1.getText().toString())) {
                 checkWin= true;
@@ -301,6 +302,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv5.getText().toString().equals(tv9.getText().toString()) && tv5.getText().toString().equals(tv1.getText().toString())) {
                 checkWin= true;
@@ -313,6 +315,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -330,6 +333,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
             if (tv5.getText().toString().equals(tv8.getText().toString()) && tv5.getText().toString().equals(tv2.getText().toString())) {
                 checkWin= true;
@@ -342,6 +346,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -359,6 +364,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv6.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv6.getText().toString().equals(tv9.getText().toString()) && tv6.getText().toString().equals(tv3.getText().toString())) {
                 checkWin= true;
@@ -372,6 +378,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
             if (tv5.getText().toString().equals(tv7.getText().toString()) && tv5.getText().toString().equals(tv3.getText().toString())) {
                 checkWin= true;
@@ -384,6 +391,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -402,6 +410,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
             if (tv5.getText().toString().equals(tv6.getText().toString()) && tv5.getText().toString().equals(tv4.getText().toString())) {
                 checkWin= true;
@@ -416,6 +425,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -435,6 +445,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv6.getText().toString())) {
             if (tv4.getText().toString().equals(tv6.getText().toString()) && tv4.getText().toString().equals(tv5.getText().toString())) {
                 checkWin= true;
@@ -449,6 +460,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv1.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv1.getText().toString().equals(tv9.getText().toString()) && tv1.getText().toString().equals(tv5.getText().toString())) {
                 checkWin= true;
@@ -463,6 +475,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv3.getText().toString()) && !TextUtils.isEmpty(tv7.getText().toString())) {
             if (tv3.getText().toString().equals(tv7.getText().toString()) && tv3.getText().toString().equals(tv5.getText().toString())) {
                 checkWin= true;
@@ -477,6 +490,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -496,6 +510,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv4.getText().toString()) && !TextUtils.isEmpty(tv5.getText().toString())) {
             if (tv4.getText().toString().equals(tv5.getText().toString()) && tv4.getText().toString().equals(tv6.getText().toString())) {
                 checkWin= true;
@@ -510,6 +525,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -529,6 +545,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv8.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv8.getText().toString().equals(tv9.getText().toString()) && tv8.getText().toString().equals(tv7.getText().toString())) {
                 checkWin= true;
@@ -543,6 +560,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv3.getText().toString())) {
             if (tv5.getText().toString().equals(tv3.getText().toString()) && tv5.getText().toString().equals(tv7.getText().toString())) {
                 checkWin= true;
@@ -557,6 +575,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -576,6 +595,7 @@ public class PlayGame extends AppCompatActivity{
                 }
 
             }
+            return checkWin;
         }else if (!TextUtils.isEmpty(tv7.getText().toString()) && !TextUtils.isEmpty(tv9.getText().toString())) {
             if (tv7.getText().toString().equals(tv9.getText().toString()) && tv7.getText().toString().equals(tv8.getText().toString())) {
                 checkWin= true;
@@ -588,6 +608,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
             }
+            return checkWin;
         }
         return checkWin;
     }
@@ -606,6 +627,7 @@ public class PlayGame extends AppCompatActivity{
                     displayAlertDialog();
                 }
 
+                return checkWin;
             }else if (!TextUtils.isEmpty(tv7.getText().toString()) && !TextUtils.isEmpty(tv8.getText().toString())) {
                 if (tv7.getText().toString().equals(tv8.getText().toString()) && tv7.getText().toString().equals(tv9.getText().toString())) {
                     checkWin= true;
@@ -613,13 +635,13 @@ public class PlayGame extends AppCompatActivity{
                         Toast.makeText(PlayGame.this, "Player 2 won!!", Toast.LENGTH_SHORT).show(); //symbol O
                         displayAlertDialog();
                     }
-
                     else{
                         Toast.makeText(PlayGame.this, "Player 1 won!!", Toast.LENGTH_SHORT).show(); //symbol X
                         displayAlertDialog();
                     }
 
                 }
+                return checkWin;
             }else if (!TextUtils.isEmpty(tv5.getText().toString()) && !TextUtils.isEmpty(tv1.getText().toString())) {
                 if (tv5.getText().toString().equals(tv1.getText().toString()) && tv5.getText().toString().equals(tv9.getText().toString())) {
                     checkWin= true;
@@ -635,6 +657,7 @@ public class PlayGame extends AppCompatActivity{
 
                 }
             }
+            return checkWin;
         }
         return checkWin;
     }
