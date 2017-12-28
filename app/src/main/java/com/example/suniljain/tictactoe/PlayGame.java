@@ -20,7 +20,7 @@ public class PlayGame extends AppCompatActivity{
 
         TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8, tv9;
         public static boolean symbol;
-        public boolean checkWin;
+        public static boolean checkWin = false;     //no winner initially
         //public int countNoOfFilledBoxes;
 
     @Override
@@ -30,7 +30,7 @@ public class PlayGame extends AppCompatActivity{
 
         //isVibrate = false;
         symbol = false;         //false is O and true is X
-        checkWin = false;       //no initial winner
+//        checkWin = false;       //no initial winner
         //countNoOfFilledBoxes = 0;       //Initially, no TextView has any symbol
 
         tv1 = (TextView) findViewById(R.id.tv1);
