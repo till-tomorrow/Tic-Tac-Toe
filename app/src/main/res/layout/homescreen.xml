@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+<!--TODO : validate the user name and display the user name who has to move the next -->
+    <!-- TODO : add sound bar or progress bar for sounds on/off-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
